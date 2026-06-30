@@ -1,26 +1,134 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #09090b;
+  --color-foreground: #f8fafc;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: #09090b;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+.will-change-transform {
+    will-change: transform, opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.bg-orb {
+    background: conic-gradient(from 180deg at 50% 50%, #2a8af6 0deg, #a853ba 180deg, #e92a67 360deg);
+}
+
+.mobile-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.mobile-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-flow {
+    animation: flow 1s linear infinite;
+}
+
+.animate-flow-reverse {
+    animation: flow-reverse 1s linear infinite;
+}
+
+@keyframes flow {
+    to {
+        stroke-dashoffset: -12;
+    }
+}
+
+@keyframes flow-reverse {
+    to {
+        stroke-dashoffset: 12;
+    }
+}
+
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.4);
+    transition: -webkit-text-stroke 0.3s ease;
+}
+
+.text-outline:hover {
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 1);
+}
+
+@media (min-width: 768px) {
+    body,
+    a,
+    button,
+    .nav-link {
+        cursor: none !important;
+    }
+}
+
+#cursor .fill-foreground {
+    fill: #ffffff;
+}
+#cursor .stroke-background\/50 {
+    stroke: rgba(9, 9, 11, 0.5);
 }
