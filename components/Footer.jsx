@@ -15,8 +15,12 @@ export default function Footer() {
                                     the Inzeedo ecosystem.</p>
                             </div>
                             <a href="#"
-                                className="bg-black text-white px-8 py-4 rounded-full font-bold text-[15px] hover:scale-105 transition-transform duration-300 shadow-xl">Deploy
-                                Now</a>
+                                className="relative inline-flex h-14 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white group transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+                                <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#ffffff_50%,#a855f7_100%)] transition-all" />
+                                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white px-8 font-bold text-slate-900 backdrop-blur-3xl group-hover:bg-slate-50 transition-colors">
+                                    Deploy Now
+                                </span>
+                            </a>
                         </div>
             
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 py-16 footer-grid">

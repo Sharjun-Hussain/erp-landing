@@ -120,8 +120,12 @@ export default function Header() {
                                     className="mobile-stagger text-white font-medium text-[16px] lg:text-[15px] will-change-transform w-full lg:w-auto text-left py-2 lg:py-0 hover:text-slate-300 transition-colors">Client
                                     Login</a>
                                 <a href="#demo"
-                                    className="mobile-stagger bg-white text-black px-6 py-3 lg:py-2.5 rounded-lg font-semibold text-[16px] lg:text-[15px] will-change-transform hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(255,255,255,0.1)] transition-transform transition-shadow duration-300 w-full lg:w-auto text-center">Book
-                                    Demo</a>
+                        className="mobile-stagger relative inline-flex h-10 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-[#09090b] group transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] w-full lg:w-auto text-center">
+                        <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#09090b_50%,#a855f7_100%)] transition-all" />
+                        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#09090b] px-6 py-2.5 font-semibold text-[15px] text-white backdrop-blur-3xl group-hover:bg-[#121214] transition-colors">
+                            Book Demo
+                        </span>
+                    </a>
                             </div>
                         </div>
                     </nav>
