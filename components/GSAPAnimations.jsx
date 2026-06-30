@@ -1,0 +1,265 @@
+'use client';
+
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import Lenis from 'lenis';
+import CustomCursor from '@/components/CustomCursor';
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+export default function GSAPAnimations() {
+    useGSAP(() => {
+        // Lenis Smooth Scrolling Setup
+        const lenis = new Lenis({
+            autoRaf: true,
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
+
+        // Header Mega Menu & Mobile Drawer Logic
+        let mm = gsap.matchMedia();
+
+        mm.add('(min-width: 1024px)', () => {
+            const megaTrigger = document.querySelector('.has-mega-menu');
+            const megaMenu = document.querySelector('.mega-menu');
+            const chevron = document.querySelector('.chevron');
+
+            gsap.set(megaMenu, { clearProps: 'all' });
+            gsap.set(megaMenu, { autoAlpha: 0, y: 10, display: 'block' });
+
+            const megaTl = gsap.timeline({ paused: true, defaults: { ease: 'power3.out' } });
+
+            megaTl.to(megaMenu, { autoAlpha: 1, y: 0, duration: 0.3 })
+                .from('.mega-title', { opacity: 0, x: -10, duration: 0.2, stagger: 0.05 }, '-=0.2')
+                .from('.mega-link-card', { opacity: 0, y: 10, duration: 0.3, stagger: 0.05 }, '-=0.1')
+                .from('.mega-promo', { opacity: 0, scale: 0.95, duration: 0.4 }, '-=0.2');
+
+            if (megaTrigger) {
+                megaTrigger.addEventListener('mouseenter', () => {
+                    megaTl.play();
+                    gsap.to(chevron, { rotation: 180, duration: 0.3 });
+                });
+                megaTrigger.addEventListener('mouseleave', () => {
+                    megaTl.reverse();
+                    gsap.to(chevron, { rotation: 0, duration: 0.3 });
+                });
+            }
+        });
+
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const hamburgerLines = document.querySelectorAll('.hamburger-line');
+        let isMenuOpen = false;
+
+        const mobileTl = gsap.timeline({ paused: true, defaults: { ease: 'power3.inOut' } });
+
+        mobileTl.to(mobileOverlay, { display: 'block', autoAlpha: 1, duration: 0.3 })
+            .to(navMenu, { x: '0%', duration: 0.5 }, '<')
+            .from('.mobile-stagger', { x: 30, opacity: 0, duration: 0.4, stagger: 0.05 }, '-=0.2');
+
+        const toggleMenu = () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileTl.play();
+                gsap.to(hamburgerLines[0], { y: 0, rotation: 45, duration: 0.3 });
+                gsap.to(hamburgerLines[1], { opacity: 0, duration: 0.3 });
+                gsap.to(hamburgerLines[2], { y: 0, rotation: -45, duration: 0.3 });
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileTl.reverse();
+                gsap.to(hamburgerLines[0], { y: -8, rotation: 0, duration: 0.3 });
+                gsap.to(hamburgerLines[1], { opacity: 1, duration: 0.3 });
+                gsap.to(hamburgerLines[2], { y: 8, rotation: 0, duration: 0.3 });
+                document.body.style.overflow = '';
+            }
+        };
+
+        if (mobileToggle) mobileToggle.addEventListener('click', toggleMenu);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', toggleMenu);
+
+        // --- ANIMATIONS ---
+        gsap.fromTo('.hero-badge', { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.2 });
+        gsap.fromTo('h1', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power4.out', delay: 0.4 });
+        gsap.fromTo('#hero-sub', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.6 });
+        gsap.fromTo('.hero-btns a', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', delay: 0.8 });
+        gsap.fromTo('.brand-logo', { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out' });
+        gsap.fromTo('.nav-item, .nav-actions a', { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.05, ease: 'power3.out', delay: 0.2 });
+
+        gsap.from('.marquee-container', {
+            scrollTrigger: { trigger: '.marquee-container', start: 'top bottom', end: 'bottom top', scrub: 1 },
+            opacity: 0.5,
+            y: 50
+        });
+
+        const moduleCards = document.querySelectorAll('.module-card');
+        if (moduleCards.length > 0) {
+            gsap.to('.scroll-progress', {
+                height: '100%',
+                scrollTrigger: {
+                    trigger: '.module-cards-container',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: true
+                }
+            });
+
+            moduleCards.forEach((card, i) => {
+                gsap.from(card, {
+                    scrollTrigger: { trigger: card, start: 'top 85%' },
+                    y: 100,
+                    rotationX: 10,
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power3.out'
+                });
+            });
+        }
+
+        const stackLayers = document.querySelectorAll('.stack-layer');
+        if (stackLayers.length > 0) {
+            gsap.from(stackLayers, {
+                scrollTrigger: { trigger: '#stack-container', start: 'top 70%' },
+                y: 100,
+                opacity: 0,
+                stagger: 0.2,
+                duration: 1.2,
+                ease: 'power3.out'
+            });
+
+            gsap.to('.layer-1', {
+                scrollTrigger: { trigger: '#stack-container', start: 'top bottom', end: 'bottom top', scrub: 1 },
+                y: -50, rotationZ: -40
+            });
+            gsap.to('.layer-2', {
+                scrollTrigger: { trigger: '#stack-container', start: 'top bottom', end: 'bottom top', scrub: 1 },
+                y: 0, rotationZ: -45
+            });
+            gsap.to('.layer-3', {
+                scrollTrigger: { trigger: '#stack-container', start: 'top bottom', end: 'bottom top', scrub: 1 },
+                y: 50, rotationZ: -50
+            });
+        }
+
+        gsap.from('.client-header', {
+            scrollTrigger: { trigger: '#clients', start: 'top 90%' },
+            y: 30, opacity: 0, duration: 1, ease: 'power3.out'
+        });
+
+        gsap.from('.biz-header', {
+            scrollTrigger: { trigger: '#business-types', start: 'top 80%' },
+            y: 40, opacity: 0, duration: 1, ease: 'power3.out'
+        });
+
+        gsap.from('.biz-card', {
+            scrollTrigger: { trigger: '#business-types', start: 'top 70%' },
+            y: 50, opacity: 0, stagger: 0.15, duration: 1, ease: 'power3.out'
+        });
+
+        const syncSection = document.querySelector('#sync-addons');
+        if (syncSection) {
+            const syncTl = gsap.timeline({
+                scrollTrigger: { trigger: '#sync-addons', start: 'top 60%' }
+            });
+            syncTl.from('.sync-text', { x: -50, opacity: 0, duration: 1, ease: 'power3.out' })
+                .from('.sync-visual', { x: 50, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.8')
+                .from('.sync-visual > div', { scale: 0.8, opacity: 0, duration: 0.8, stagger: 0.2, ease: 'back.out(1.7)' }, '-=0.4');
+        }
+
+        const robustTrack = document.getElementById('robust-track');
+        if (robustTrack) {
+            let getScrollAmount = () => -(robustTrack.scrollWidth - window.innerWidth);
+            const tween = gsap.to(robustTrack, {
+                x: getScrollAmount,
+                ease: 'none'
+            });
+
+            ScrollTrigger.create({
+                trigger: '#robust-horizontal',
+                start: 'top top',
+                end: () => `+=${getScrollAmount() * -1}`,
+                pin: true,
+                animation: tween,
+                scrub: 1,
+                invalidateOnRefresh: true
+            });
+
+            gsap.utils.toArray('.robust-card').forEach(card => {
+                gsap.fromTo(card,
+                    { scale: 0.8, opacity: 0.5, rotationY: 15 },
+                    {
+                        scale: 1, opacity: 1, rotationY: 0,
+                        duration: 1,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: card,
+                            containerAnimation: tween,
+                            start: 'left center',
+                            toggleActions: 'play none none reverse'
+                        }
+                    }
+                );
+            });
+
+            gsap.utils.toArray('.jump-text').forEach(text => {
+                gsap.fromTo(text,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 0.8, ease: 'back.out(2)',
+                        scrollTrigger: {
+                            trigger: text,
+                            containerAnimation: tween,
+                            start: 'left 80%',
+                            toggleActions: 'play none none reverse'
+                        }
+                    }
+                );
+            });
+        }
+
+        const mobileCards = document.querySelectorAll('.mobile-card');
+        if (mobileCards.length > 0) {
+            gsap.from(mobileCards, {
+                scrollTrigger: { trigger: mobileCards[0], start: 'top 80%' },
+                x: -50, opacity: 0, stagger: 0.2, duration: 1, ease: 'power3.out'
+            });
+        }
+
+        gsap.set('#premium-footer', { clipPath: 'inset(0% 0% 0% 0% round 4rem 4rem 0 0)' });
+        gsap.to('#premium-footer', {
+            scrollTrigger: { trigger: '#premium-footer', start: 'top bottom', end: 'top 80%', scrub: 1 },
+            clipPath: 'inset(0% 2% 0% 2% round 4rem 4rem 0 0)',
+            ease: 'none'
+        });
+
+        gsap.from('.footer-cta > div', {
+            scrollTrigger: { trigger: '#premium-footer', start: 'top 80%' },
+            y: 40, opacity: 0, duration: 1, ease: 'power3.out'
+        });
+        gsap.from('.footer-cta > a', {
+            scrollTrigger: { trigger: '#premium-footer', start: 'top 80%' },
+            scale: 0.8, opacity: 0, duration: 1, ease: 'back.out(1.5)', delay: 0.2
+        });
+        gsap.from('.footer-grid > div', {
+            scrollTrigger: { trigger: '.footer-grid', start: 'top 90%' },
+            y: 30, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out'
+        });
+        gsap.from('#massive-footer-text', {
+            scrollTrigger: { trigger: '#massive-footer-text', start: 'top 100%' },
+            y: '50%', opacity: 0, duration: 1.5, ease: 'power4.out'
+        });
+
+        return () => {
+            if (mobileToggle) mobileToggle.removeEventListener('click', toggleMenu);
+            if (mobileOverlay) mobileOverlay.removeEventListener('click', toggleMenu);
+            lenis.destroy();
+        }
+    });
+    return <CustomCursor />;
+}
