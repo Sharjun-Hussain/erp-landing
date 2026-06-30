@@ -25,8 +25,8 @@ export default function Home() {
             <SyncAddons />
             <RobustTrack />
             <MobileCards />
-            <Footer />
             <FAQSection />
+            <Footer />
             <GSAPAnimations />
         </main>
     );
