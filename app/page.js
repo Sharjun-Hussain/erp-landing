@@ -311,43 +311,50 @@ export default function Home() {
                                 <div className="flex flex-col gap-1">
                                     <h4
                                         className="mega-title hidden lg:block text-xs uppercase tracking-widest text-slate-500 mb-2">
-                                        Core ERP</h4>
+                                        Core Operations</h4>
                                     <a href="#"
                                         className="mega-link-card flex items-start gap-4 p-2.5 lg:p-3 lg:-ml-3 rounded-xl hover:bg-white/5 transition-colors">
                                         <div
                                             className="w-10 h-10 flex items-center justify-center rounded-lg bg-purple-500/15 text-purple-400 text-lg shrink-0">
-                                            ⚡</div>
+                                            📦</div>
                                         <div>
-                                            <h5 className="text-white text-[15px] font-medium mb-0.5">Real-time Sync</h5>
-                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Instant
-                                                inventory propagation.</p>
+                                            <h5 className="text-white text-[15px] font-medium mb-0.5">Advanced Inventory</h5>
+                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">GRN & multi-branch transfers.</p>
                                         </div>
                                     </a>
                                     <a href="#"
                                         className="mega-link-card flex items-start gap-4 p-2.5 lg:p-3 lg:-ml-3 rounded-xl hover:bg-white/5 transition-colors">
                                         <div
                                             className="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-500/15 text-blue-400 text-lg shrink-0">
-                                            🏢</div>
+                                            🖨️</div>
                                         <div>
-                                            <h5 className="text-white text-[15px] font-medium mb-0.5">Multi-Tenant Core</h5>
-                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Isolated
-                                                database architecture.</p>
+                                            <h5 className="text-white text-[15px] font-medium mb-0.5">Hardware Ready</h5>
+                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">QZ Tray receipt & drawer support.</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <h4
                                         className="mega-title hidden lg:block text-xs uppercase tracking-widest text-slate-500 mb-2">
-                                        Automation</h4>
+                                        Growth & Manufacturing</h4>
                                     <a href="#"
                                         className="mega-link-card flex items-start gap-4 p-2.5 lg:p-3 lg:-ml-3 rounded-xl hover:bg-white/5 transition-colors">
                                         <div
                                             className="w-10 h-10 flex items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-400 text-lg shrink-0">
                                             🤖</div>
                                         <div>
-                                            <h5 className="text-white text-[15px] font-medium mb-0.5">CRM Workflows</h5>
-                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Automated
-                                                WhatsApp messaging.</p>
+                                            <h5 className="text-white text-[15px] font-medium mb-0.5">WhatsApp CRM</h5>
+                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Automated SMS & Campaigns.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#"
+                                        className="mega-link-card flex items-start gap-4 p-2.5 lg:p-3 lg:-ml-3 rounded-xl hover:bg-white/5 transition-colors">
+                                        <div
+                                            className="w-10 h-10 flex items-center justify-center rounded-lg bg-amber-500/15 text-amber-400 text-lg shrink-0">
+                                            🏭</div>
+                                        <div>
+                                            <h5 className="text-white text-[15px] font-medium mb-0.5">Production BOM</h5>
+                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Recipes & raw material tracking.</p>
                                         </div>
                                     </a>
                                 </div>
@@ -852,15 +859,15 @@ export default function Home() {
                     <a href="#" className="flex items-center gap-3 text-2xl font-bold text-slate-900 mb-6">
                         <div className="w-6 h-6 rounded-full bg-blue-600"></div> Inzeedo ERP
                     </a>
-                    <p className="text-slate-600 text-sm leading-relaxed mb-8">The ultimate multi-tenant architecture for
-                        retail, manufacturing, and B2B wholesale. Built on Linux Debian, engineered for scale.</p>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-8">The complete point-of-sale and business management software. Build for retail, restaurants, manufacturing, and growing enterprises.</p>
                 </div>
 
                 <div>
                     <h4 className="text-slate-900 font-bold mb-6 tracking-widest uppercase text-xs">Modules</h4>
                     <ul className="space-y-4 text-sm text-slate-600">
                         <li><a href="#" className="hover:text-blue-600 transition-all">Omnichannel POS</a></li>
-                        <li><a href="#" className="hover:text-blue-600 transition-all">Inventory</a></li>
+                        <li><a href="#" className="hover:text-blue-600 transition-all">Advanced Inventory & GRN</a></li>
+                        <li><a href="#" className="hover:text-blue-600 transition-all">Manufacturing & Recipes</a></li>
                         <li><a href="#" className="hover:text-blue-600 transition-all">WhatsApp CRM</a></li>
                     </ul>
                 </div>
@@ -868,8 +875,9 @@ export default function Home() {
                 <div>
                     <h4 className="text-slate-900 font-bold mb-6 tracking-widest uppercase text-xs">Platform</h4>
                     <ul className="space-y-4 text-sm text-slate-600">
-                        <li><a href="#" className="hover:text-blue-600 transition-all">Web Dashboard</a></li>
-                        <li><a href="#" className="hover:text-blue-600 transition-all">Linux Debian</a></li>
+                        <li><a href="#" className="hover:text-blue-600 transition-all">Hardware & QZ Tray</a></li>
+                        <li><a href="#" className="hover:text-blue-600 transition-all">Shopify Sync</a></li>
+                        <li><a href="#" className="hover:text-blue-600 transition-all">Shift Management</a></li>
                     </ul>
                 </div>
 
