@@ -19,7 +19,8 @@ export default function GSAPAnimations() {
         });
 
         lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        const updateLenis = (time) => lenis.raf(time * 1000);
+        gsap.ticker.add(updateLenis);
         gsap.ticker.lagSmoothing(0);
 
         // Header Mega Menu & Mobile Drawer Logic
@@ -41,14 +42,22 @@ export default function GSAPAnimations() {
                 .from('.mega-promo', { opacity: 0, scale: 0.95, duration: 0.4 }, '-=0.2');
 
             if (megaTrigger) {
-                megaTrigger.addEventListener('mouseenter', () => {
+                const handleMouseEnter = () => {
                     megaTl.play();
                     gsap.to(chevron, { rotation: 180, duration: 0.3 });
-                });
-                megaTrigger.addEventListener('mouseleave', () => {
+                };
+                const handleMouseLeave = () => {
                     megaTl.reverse();
                     gsap.to(chevron, { rotation: 0, duration: 0.3 });
-                });
+                };
+                
+                megaTrigger.addEventListener('mouseenter', handleMouseEnter);
+                megaTrigger.addEventListener('mouseleave', handleMouseLeave);
+                
+                return () => {
+                    megaTrigger.removeEventListener('mouseenter', handleMouseEnter);
+                    megaTrigger.removeEventListener('mouseleave', handleMouseLeave);
+                };
             }
         });
 
@@ -258,6 +267,7 @@ export default function GSAPAnimations() {
         return () => {
             if (mobileToggle) mobileToggle.removeEventListener('click', toggleMenu);
             if (mobileOverlay) mobileOverlay.removeEventListener('click', toggleMenu);
+            gsap.ticker.remove(updateLenis);
             lenis.destroy();
         }
     });
