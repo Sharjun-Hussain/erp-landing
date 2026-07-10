@@ -6,7 +6,7 @@ export default function Header() {
                     className="fixed inset-0 bg-[#09090b]/80 backdrop-blur-sm z-[900] hidden opacity-0 will-change-transform"></div>
             
             <header className="fixed top-4 lg:top-6 left-0 right-0 mx-auto w-[95%] max-w-[1200px] z-[1000] border border-white/10 rounded-2xl bg-[#09090b]/70 backdrop-blur-md shadow-xl transition-colors duration-300 transform-gpu">
-                    <nav className="w-full px-6 lg:px-8 h-16 flex items-center justify-between relative">
+                    <nav className="w-full pl-6 pr-6 lg:pl-8 lg:pr-12 h-16 flex items-center justify-between relative">
                         <a href="#"
                             className="brand-logo flex items-center gap-3 text-lg font-bold text-slate-50 tracking-tight will-change-transform z-50">
                             <div className="w-6 h-6 rounded-lg bg-orb shadow-[0_0_20px_rgba(168,83,186,0.4)]"></div>
