@@ -13,7 +13,7 @@ export default function GSAPAnimations() {
     useGSAP(() => {
         // Lenis Smooth Scrolling Setup
         const lenis = new Lenis({
-            autoRaf: true,
+            autoRaf: false,
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         });
@@ -240,29 +240,7 @@ export default function GSAPAnimations() {
             });
         }
 
-        gsap.set('#premium-footer', { clipPath: 'inset(0% 0% 0% 0% round 4rem 4rem 0 0)' });
-        gsap.to('#premium-footer', {
-            scrollTrigger: { trigger: '#premium-footer', start: 'top bottom', end: 'top 80%', scrub: 1 },
-            clipPath: 'inset(0% 2% 0% 2% round 4rem 4rem 0 0)',
-            ease: 'none'
-        });
 
-        gsap.from('.footer-cta > div', {
-            scrollTrigger: { trigger: '#premium-footer', start: 'top 80%' },
-            y: 40, opacity: 0, duration: 1, ease: 'power3.out'
-        });
-        gsap.from('.footer-cta > a', {
-            scrollTrigger: { trigger: '#premium-footer', start: 'top 80%' },
-            scale: 0.8, opacity: 0, duration: 1, ease: 'back.out(1.5)', delay: 0.2
-        });
-        gsap.from('.footer-grid > div', {
-            scrollTrigger: { trigger: '.footer-grid', start: 'top 90%' },
-            y: 30, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out'
-        });
-        gsap.from('#massive-footer-text', {
-            scrollTrigger: { trigger: '#massive-footer-text', start: 'top 100%' },
-            y: '50%', opacity: 0, duration: 1.5, ease: 'power4.out'
-        });
 
         return () => {
             if (mobileToggle) mobileToggle.removeEventListener('click', toggleMenu);

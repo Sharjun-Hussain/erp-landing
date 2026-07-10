@@ -12,18 +12,20 @@ export default function CustomCursor() {
     useGSAP((context, contextSafe) => {
         if (typeof window !== 'undefined' && window.innerWidth < 768) return;
 
+        let isVisible = false;
+        const xTo = gsap.quickTo(svgRef.current, "x", { duration: 0.25, ease: "power2.out" });
+        const yTo = gsap.quickTo(svgRef.current, "y", { duration: 0.25, ease: "power2.out" });
+
         const handleMouseMove = contextSafe((e) => {
             if (!svgRef.current) return;
 
-            const { clientX, clientY } = e;
-
-            gsap.to(svgRef.current, {
-                x: clientX,
-                y: clientY,
-                ease: 'power2.out',
-                duration: 0.25,
-                opacity: 1,
-            });
+            xTo(e.clientX);
+            yTo(e.clientY);
+            
+            if (!isVisible) {
+                gsap.to(svgRef.current, { opacity: 1, duration: 0.25 });
+                isVisible = true;
+            }
         });
 
         if (typeof window !== 'undefined') {

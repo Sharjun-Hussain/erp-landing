@@ -102,11 +102,11 @@ export default function Footer() {
                     </div>
                     <a
                         href="#"
-                        className="relative inline-flex h-14 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white group transition-transform duration-500 ease-out hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.4)]"
+                        className="relative inline-flex h-14 overflow-hidden rounded-xl p-[2px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white group transition-transform duration-500 ease-out hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.4)]"
                     >
                         {/* Spinning border handled by Tailwind */}
                         <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#ffffff_50%,#a855f7_100%)] transition-all" />
-                        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white px-8 font-bold text-slate-900 backdrop-blur-3xl group-hover:bg-slate-50 transition-colors duration-300">
+                        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-white px-8 font-bold text-slate-900 backdrop-blur-3xl group-hover:bg-slate-50 transition-colors duration-300">
                             Deploy Now
                         </span>
                     </a>

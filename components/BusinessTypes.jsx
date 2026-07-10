@@ -14,7 +14,7 @@ export default function BusinessTypes() {
             
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             <div
-                                className="biz-card bg-[#121214] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.02] hover:border-white/20 transition-all duration-300 group will-change-transform">
+                                className="biz-card bg-[#121214] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.02] hover:border-white/20 transition-colors duration-300 group will-change-transform">
                                 <div
                                     className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-xl mb-6 group-hover:scale-110 transition-transform">
                                     🛍️</div>
@@ -24,7 +24,7 @@ export default function BusinessTypes() {
                             </div>
             
                             <div
-                                className="biz-card bg-[#121214] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.02] hover:border-white/20 transition-all duration-300 group will-change-transform">
+                                className="biz-card bg-[#121214] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.02] hover:border-white/20 transition-colors duration-300 group will-change-transform">
                                 <div
                                     className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 text-xl mb-6 group-hover:scale-110 transition-transform">
                                     📦</div>
@@ -34,7 +34,7 @@ export default function BusinessTypes() {
                             </div>
             
                             <div
-                                className="biz-card bg-[#121214] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.02] hover:border-white/20 transition-all duration-300 group will-change-transform">
+                                className="biz-card bg-[#121214] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.02] hover:border-white/20 transition-colors duration-300 group will-change-transform">
                                 <div
                                     className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 text-xl mb-6 group-hover:scale-110 transition-transform">
                                     🏭</div>
@@ -45,7 +45,7 @@ export default function BusinessTypes() {
                             </div>
             
                             <div
-                                className="biz-card bg-[#121214] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.02] hover:border-white/20 transition-all duration-300 group will-change-transform">
+                                className="biz-card bg-[#121214] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.02] hover:border-white/20 transition-colors duration-300 group will-change-transform">
                                 <div
                                     className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 text-xl mb-6 group-hover:scale-110 transition-transform">
                                     🛒</div>
