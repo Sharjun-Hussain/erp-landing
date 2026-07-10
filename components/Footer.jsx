@@ -77,7 +77,7 @@ export default function Footer() {
                 },
             }
         );
-    }, { scope: footerRef }); // Scope ensures GSAP only selects elements inside this specific footer
+    }, { scope: footerRef, dependencies: [] }); // Scope ensures GSAP only selects elements inside this specific footer
 
     return (
         <footer

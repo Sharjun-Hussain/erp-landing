@@ -34,7 +34,7 @@ export default function CustomCursor() {
                 window.removeEventListener('mousemove', handleMouseMove);
             };
         }
-    });
+    }, []);
 
     return (
         <svg

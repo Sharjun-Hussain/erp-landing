@@ -57,8 +57,7 @@ export default function SyncAddons() {
                                 <span className="text-slate-300 font-semibold text-xs">Custom Web</span>
                             </div>
             
-                            <svg className="absolute inset-0 w-full h-full z-0 pointer-events-none"
-                                style={{ 'filter': 'drop-shadow(0 0 8px rgba(59,130,246,0.5))' }}>
+                            <svg className="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-60">
                                 <path d="M 120 120 L 250 200" stroke="rgba(149, 191, 71, 0.5)" strokeWidth="2"
                                     strokeDasharray="6,6" fill="none" className="animate-flow-reverse" />
                                 <path d="M 100 140 L 230 220" stroke="rgba(59, 130, 246, 0.5)" strokeWidth="2"
