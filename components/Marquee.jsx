@@ -5,16 +5,20 @@ export default function Marquee() {
             <div
                     className="py-10 border-y border-white/5 overflow-hidden bg-[#0a0a0c] relative z-20 flex whitespace-nowrap marquee-container">
                     <div
-                        className="marquee-content animate-marquee text-5xl md:text-7xl font-black text-slate-200 uppercase tracking-widest flex gap-16 items-center will-change-transform">
-                        <span>ZERO DOWNTIME POS</span> <span className="text-white/10">•</span>
-                        <span>OMNICHANNEL READY</span> <span className="text-white/10">•</span>
-                        <span>ELIMINATE OVERSELLING</span> <span className="text-white/10">•</span>
-                        <span>UNIFIED DASHBOARD</span> <span className="text-white/10">•</span>
-                        <span>CRM THAT CONVERTS</span> <span className="text-white/10">•</span>
-                        <span>BUILT FOR SCALE</span> <span className="text-white/10">•</span>
-                        <span>ZERO DOWNTIME POS</span> <span className="text-white/10">•</span>
-                        <span>OMNICHANNEL READY</span> <span className="text-white/10">•</span>
-                        <span>ELIMINATE OVERSELLING</span>
+                        className="marquee-content animate-marquee text-4xl md:text-6xl font-black text-slate-400 capitalize tracking-tight flex gap-24 items-center will-change-transform pr-24">
+                        <span>restaurant pos system</span>
+                        <span>cloud inventory software</span>
+                        <span>offline billing app</span>
+                        <span>multi-store management</span>
+                        <span>mobile waiter ordering</span>
+                        <span>omnichannel retail erp</span>
+                        {/* Repeat for seamless loop */}
+                        <span>restaurant pos system</span>
+                        <span>cloud inventory software</span>
+                        <span>offline billing app</span>
+                        <span>multi-store management</span>
+                        <span>mobile waiter ordering</span>
+                        <span>omnichannel retail erp</span>
                     </div>
                 </div>
         </>
