@@ -240,6 +240,117 @@ export default function GSAPAnimations() {
             });
         }
 
+        gsap.from('.deployment-header', {
+            scrollTrigger: { trigger: '#deployment-options', start: 'top 80%' },
+            y: 40, opacity: 0, duration: 1, ease: 'power3.out'
+        });
+
+        gsap.from('.deployment-card', {
+            scrollTrigger: { trigger: '#deployment-options', start: 'top 70%' },
+            y: 50, opacity: 0, stagger: 0.2, duration: 1, ease: 'power3.out'
+        });
+
+        // Windows POS Looping Animation
+        const winContainer = document.querySelector('.windows-anim-container');
+        if (winContainer) {
+            const winTl = gsap.timeline({ repeat: -1, repeatDelay: 1.5 });
+            
+            winTl.set('.fake-mouse', { x: 100, y: 150, opacity: 0 })
+                 .set('.windows-launcher', { opacity: 1, scale: 1, display: 'flex' })
+                 .set('.windows-pos', { opacity: 0, scale: 0.9, display: 'none' })
+                 .set('.loading-bar', { width: '0%' })
+                 .set('.install-text', { opacity: 1 })
+                 .set('.loading-text-container', { opacity: 0 });
+
+            winTl.to('.fake-mouse', { opacity: 1, duration: 0.3 })
+                 .to('.fake-mouse', { x: 0, y: 50, duration: 1, ease: 'power2.out' })
+                 
+                 .to('.fake-mouse', { scale: 0.8, duration: 0.1 })
+                 .to('.install-btn', { scale: 0.95, duration: 0.1 }, '<')
+                 .to('.fake-mouse', { scale: 1, duration: 0.1 })
+                 .to('.install-btn', { scale: 1, duration: 0.1 }, '<')
+                 
+                 .to('.fake-mouse', { x: 150, y: 150, opacity: 0, duration: 1, ease: 'power2.in' }, '+=0.2')
+                 
+                 .to('.install-text', { opacity: 0, duration: 0.2 }, '-=1')
+                 .to('.loading-text-container', { opacity: 1, duration: 0.2 }, '<')
+                 
+                 .to('.loading-bar', { width: '100%', duration: 1.5, ease: 'power1.inOut' })
+                 .to({val:0}, {val:100, duration: 1.5, ease: 'power1.inOut', onUpdate: function() {
+                     const text = document.querySelector('.loading-text');
+                     if (text) text.innerHTML = Math.round(this.targets()[0].val) + '%';
+                 }}, '<')
+                 
+                 .to('.windows-launcher', { opacity: 0, scale: 0.9, duration: 0.3, ease: 'power2.in' })
+                 .set('.windows-launcher', { display: 'none' })
+                 
+                 .set('.windows-pos', { display: 'flex' })
+                 .to('.windows-pos', { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.5)' })
+                 
+                 .to({}, { duration: 4 });
+        }
+
+        // Mobile POS Looping Animation
+        const mobContainer = document.querySelector('.mobile-anim-container');
+        if (mobContainer) {
+            const mobTl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+            
+            mobTl.set(['.mobile-scanner-line-1', '.mobile-scanner-line-2', '.mobile-scanner-line-3'], { y: '-10%', opacity: 0 })
+                 .set(['.mobile-add-badge-1', '.mobile-add-badge-2', '.mobile-add-badge-3'], { scale: 0, opacity: 0 })
+                 .set('.checkout-count', { innerHTML: '0' })
+                 .set('.checkout-price', { innerHTML: 'LKR 0' })
+                 .set('.checkout-btn', { scale: 1, backgroundColor: '#2563eb' })
+                 .set('.receipt-overlay', { y: '100%' });
+
+            // 1. Scan item 1
+            mobTl.to('.mobile-scanner-line-1', { opacity: 1, duration: 0.1 })
+                 .to('.mobile-scanner-line-1', { y: '100%', duration: 0.4, ease: 'linear' })
+                 .to('.mobile-scanner-line-1', { opacity: 0, duration: 0.1 })
+                 .to('.target-product-1', { scale: 0.95, duration: 0.1 })
+                 .to('.mobile-add-badge-1', { opacity: 1, scale: 1, duration: 0.2, ease: 'back.out(2)' }, '<')
+                 .to('.target-product-1', { scale: 1, duration: 0.1 })
+                 .set('.checkout-count', { innerHTML: '1' })
+                 .set('.checkout-price', { innerHTML: 'LKR 1,200' })
+                 .to('.checkout-btn', { scale: 1.05, duration: 0.1 })
+                 .to('.checkout-btn', { scale: 1, duration: 0.1 })
+                 
+            // 2. Scan item 2
+                 .to('.mobile-scanner-line-2', { opacity: 1, duration: 0.1 }, '+=0.2')
+                 .to('.mobile-scanner-line-2', { y: '100%', duration: 0.4, ease: 'linear' })
+                 .to('.mobile-scanner-line-2', { opacity: 0, duration: 0.1 })
+                 .to('.target-product-2', { scale: 0.95, duration: 0.1 })
+                 .to('.mobile-add-badge-2', { opacity: 1, scale: 1, duration: 0.2, ease: 'back.out(2)' }, '<')
+                 .to('.target-product-2', { scale: 1, duration: 0.1 })
+                 .set('.checkout-count', { innerHTML: '2' })
+                 .set('.checkout-price', { innerHTML: 'LKR 1,650' })
+                 .to('.checkout-btn', { scale: 1.05, duration: 0.1 })
+                 .to('.checkout-btn', { scale: 1, duration: 0.1 })
+                 
+            // 3. Scan item 3
+                 .to('.mobile-scanner-line-3', { opacity: 1, duration: 0.1 }, '+=0.2')
+                 .to('.mobile-scanner-line-3', { y: '100%', duration: 0.4, ease: 'linear' })
+                 .to('.mobile-scanner-line-3', { opacity: 0, duration: 0.1 })
+                 .to('.target-product-3', { scale: 0.95, duration: 0.1 })
+                 .to('.mobile-add-badge-3', { opacity: 1, scale: 1, duration: 0.2, ease: 'back.out(2)' }, '<')
+                 .to('.target-product-3', { scale: 1, duration: 0.1 })
+                 .set('.checkout-count', { innerHTML: '3' })
+                 .set('.checkout-price', { innerHTML: 'LKR 2,300' })
+                 .to('.checkout-btn', { scale: 1.05, duration: 0.1 })
+                 .to('.checkout-btn', { scale: 1, duration: 0.1 })
+                 
+            // 4. Proceed checkout (click)
+                 .to({}, { duration: 0.4 })
+                 .to('.checkout-btn', { scale: 0.95, backgroundColor: '#16a34a', duration: 0.1 })
+                 .to('.checkout-btn', { scale: 1, duration: 0.1 })
+                 
+            // 5. Print Receipt (Slides up)
+                 .to({}, { duration: 0.3 })
+                 .to('.receipt-overlay', { y: '0%', duration: 0.6, ease: 'power3.out' })
+                 
+            // Hold receipt on screen
+                 .to({}, { duration: 3 });
+        }
+
 
 
         return () => {

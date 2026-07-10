@@ -9,6 +9,7 @@ import Clients from "@/components/Clients";
 import BusinessTypes from "@/components/BusinessTypes";
 import SyncAddons from "@/components/SyncAddons";
 import RobustTrack from "@/components/RobustTrack";
+import DeploymentOptions from "@/components/DeploymentOptions";
 import MobileCards from "@/components/MobileCards";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,7 @@ export default function Home() {
             <SyncAddons />
             <RobustTrack />
             <MobileCards />
+            <DeploymentOptions />
             <FAQSection />
             <Footer />
             <GSAPAnimations />
