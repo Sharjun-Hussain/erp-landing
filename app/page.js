@@ -12,6 +12,7 @@ import SyncAddons from "@/components/SyncAddons";
 import RobustTrack from "@/components/RobustTrack";
 import DeploymentOptions from "@/components/DeploymentOptions";
 import MobileCards from "@/components/MobileCards";
+import PackageIncludes from "@/components/PackageIncludes";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
             <RobustTrack />
             <MobileCards />
             <DeploymentOptions />
+            <PackageIncludes />
             <FAQSection />
             <Footer />
             <GSAPAnimations />

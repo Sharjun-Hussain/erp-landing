@@ -24,6 +24,16 @@ export default function GSAPAnimations() {
         gsap.ticker.lagSmoothing(0);
 
         // Header Mega Menu & Mobile Drawer Logic
+        gsap.from('.package-header', {
+            scrollTrigger: { trigger: '#package-includes', start: 'top 80%' },
+            y: 40, opacity: 0, duration: 1, ease: 'power3.out'
+        });
+
+        gsap.from('.package-card', {
+            scrollTrigger: { trigger: '#package-includes', start: 'top 70%' },
+            y: 50, opacity: 0, stagger: 0.2, duration: 1, ease: 'power3.out'
+        });
+
         let mm = gsap.matchMedia();
 
         mm.add('(min-width: 1024px)', () => {
