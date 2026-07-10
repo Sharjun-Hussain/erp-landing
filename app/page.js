@@ -20,7 +20,7 @@ export default function Home() {
             <Hero />
             <Marquee />
             <Modules />
-            <Architecture />
+            {/* <Architecture /> */}
             <Clients />
             <BusinessTypes />
             <SyncAddons />

@@ -400,9 +400,86 @@ export default function GSAPAnimations() {
                  .to('.web-success-overlay', { y: '0%', opacity: 1, duration: 0.5, ease: 'power3.out' })
                  
             // Hold on screen
+            // Hold on screen
                  .to({}, { duration: 3 });
         }
 
+        // Architecture Network Flow Animations
+        const networkFlow = document.querySelector('#network-flow');
+        if (networkFlow) {
+            // Node Entrances
+            gsap.fromTo('.network-node', 
+                { y: 30, opacity: 0 }, 
+                { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power3.out',
+                  scrollTrigger: { trigger: '#network-flow', start: 'top 70%' } 
+                }
+            );
+            gsap.fromTo('.arch-arrow-container',
+                { opacity: 0 },
+                { opacity: 0.5, duration: 0.5, stagger: 0.2, delay: 0.4,
+                  scrollTrigger: { trigger: '#network-flow', start: 'top 70%' }
+                }
+            );
+
+            // Sequential Data Flow Loop
+            const flowTl = gsap.timeline({ repeat: -1, delay: 0.5 });
+            
+            // Trigger Node 1 (Client Start)
+            flowTl.to('.node-1-btn', { backgroundColor: 'rgba(16,185,129,0.8)', duration: 0.2, yoyo: true, repeat: 1 })
+                  
+                  // Arrow 1
+                  .fromTo('.arch-arrow-path-1', { strokeDashoffset: 100 }, { strokeDashoffset: 0, duration: 0.6, ease: 'none' }, '+=0.2')
+                  .to('.arch-arrow-head-1', { opacity: 1, duration: 0.1, yoyo: true, repeat: 1 })
+                  
+                  // Trigger Node 2 (Forward Proxy)
+                  .to('.node-2-shield', { borderColor: 'rgba(96,165,250,1)', duration: 0.2, yoyo: true, repeat: 1 })
+                  .fromTo('.node-2-log', { opacity: 0 }, { opacity: 1, duration: 0.5 }, '<')
+                  
+                  // Arrow 2
+                  .fromTo('.arch-arrow-path-2', { strokeDashoffset: 100 }, { strokeDashoffset: 0, duration: 0.6, ease: 'none' }, '+=0.2')
+                  .to('.arch-arrow-head-2', { opacity: 1, duration: 0.1, yoyo: true, repeat: 1 })
+                  
+                  // Trigger Node 3 (Reverse Proxy)
+                  .fromTo('.node-3-incoming', { x: '-100%' }, { x: '0%', duration: 0.2 })
+                  .fromTo('.node-3-out-1', { x: '-100%' }, { x: '0%', duration: 0.2 }, '<0.1')
+                  .fromTo('.node-3-out-2', { x: '-100%' }, { x: '0%', duration: 0.2 }, '<0.2')
+                  .fromTo('.node-3-out-3', { x: '-100%' }, { x: '0%', duration: 0.2 }, '<0.3')
+                  
+                  // Arrow 3
+                  .fromTo('.arch-arrow-path-3', { strokeDashoffset: 100 }, { strokeDashoffset: 0, duration: 0.6, ease: 'none' }, '+=0.2')
+                  .to('.arch-arrow-head-3', { opacity: 1, duration: 0.1, yoyo: true, repeat: 1 })
+
+                  // Trigger Node 4 (Server)
+                  .to('.node-4-log-1', { y: 0, opacity: 1, duration: 0.2 })
+                  .to('.node-4-log-2', { y: 0, opacity: 1, duration: 0.2 }, '<0.2')
+                  .to('.node-4-log-3', { y: 0, opacity: 1, duration: 0.2 }, '<0.4')
+                  
+                  // Arrow 4
+                  .fromTo('.arch-arrow-path-4', { strokeDashoffset: 100 }, { strokeDashoffset: 0, duration: 0.6, ease: 'none' }, '+=0.2')
+                  .to('.arch-arrow-head-4', { opacity: 1, duration: 0.1, yoyo: true, repeat: 1 })
+
+                  // Trigger Node 5 (DB)
+                  .to('.node-5-pulse', { scale: 1.5, opacity: 0.5, duration: 0.3, yoyo: true, repeat: 1 })
+                  .to('.node-5-cell-1', { opacity: 1, duration: 0.2, yoyo: true, repeat: 1 }, '<0.1')
+                  .to('.node-5-cell-2', { opacity: 1, duration: 0.2, yoyo: true, repeat: 1 }, '<0.2')
+                  .to('.node-5-cell-3', { opacity: 1, duration: 0.2, yoyo: true, repeat: 1 }, '<0.3')
+                  .to('.node-5-cell-4', { opacity: 1, duration: 0.2, yoyo: true, repeat: 1 }, '<0.4')
+                  
+                  // Reset states for loop
+                  .to({}, { duration: 1 }) // hold end state
+                  .to('.node-2-log', { opacity: 0, duration: 0.2 })
+                  .to('.node-3-incoming', { x: '-100%', duration: 0.1 }, '<')
+                  .to('.node-3-out-1', { x: '-100%', duration: 0.1 }, '<')
+                  .to('.node-3-out-2', { x: '-100%', duration: 0.1 }, '<')
+                  .to('.node-3-out-3', { x: '-100%', duration: 0.1 }, '<')
+                  .to('.node-4-log-1', { y: 8, opacity: 0, duration: 0.1 }, '<')
+                  .to('.node-4-log-2', { y: 8, opacity: 0, duration: 0.1 }, '<')
+                  .to('.node-4-log-3', { y: 8, opacity: 0, duration: 0.1 }, '<')
+                  .to('[class^="arch-arrow-path-"]', { strokeDashoffset: 100, duration: 0.1 }, '<');
+
+            // Node 2 Shield Scanner loop
+            gsap.to('.node-2-scan', { y: 120, duration: 1.5, repeat: -1, yoyo: true, ease: 'linear' });
+        }
 
         return () => {
             if (mobileToggle) mobileToggle.removeEventListener('click', toggleMenu);
