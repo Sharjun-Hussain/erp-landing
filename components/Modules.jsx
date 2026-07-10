@@ -8,10 +8,9 @@ export default function Modules() {
             
                             {/**/}
                             <div className="lg:w-1/3 lg:sticky top-32 z-10 module-text-container">
-                                <span className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-4 block">Unified
-                                    Operations</span>
+                                <span className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-4 block">All In One</span>
                                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">Everything you need to run your business.</h2>
-                                <p className="text-slate-400 text-lg mb-8">Stop switching between different apps. Our all-in-one software connects your physical store, online shop, and back office automatically.</p>
+                                <p className="text-slate-400 text-lg mb-8">Stop using many different apps. Our software connects your store, online shop, and back office automatically.</p>
             
                                 <div className="hidden lg:flex flex-col gap-4">
                                     <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
@@ -40,8 +39,8 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all relative z-10">
                                         🏪</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Omnichannel Sales & POS</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Enjoy a premium, touch-optimized POS experience. Choose between 2 beautiful Sales UIs tailored for different user workflows.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Sales & POS System</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">A beautiful, easy-to-use touch screen POS. Choose from two different sales screens that fit your working style.</p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm relative z-10">
                                         <li className="flex items-center gap-2"><span className="text-blue-500">✓</span> Credit Sales & Returns</li>
                                         <li className="flex items-center gap-2"><span className="text-blue-500">✓</span> Custom Barcode & Receipts</li>
@@ -64,8 +63,8 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-amber-500/10 border border-amber-500/20 rounded-2xl flex items-center justify-center text-amber-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all relative z-10">
                                         📦</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Supplier & Inventory Mastery</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">A complete ecosystem for managing vendors and tracking stock levels across unlimited global branches.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Supplier & Inventory Control</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Manage all your suppliers and track your stock perfectly, across as many branches as you need.</p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm relative z-10">
                                         <li className="flex items-center gap-2"><span className="text-amber-500">✓</span> Supplier Directory</li>
                                         <li className="flex items-center gap-2"><span className="text-amber-500">✓</span> Supplier Ledgers</li>
@@ -87,8 +86,8 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-purple-500/10 border border-purple-500/20 rounded-2xl flex items-center justify-center text-purple-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,83,186,0.5)] transition-all relative z-10">
                                         📈</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Complete Accounting Suite</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Forget manual entries. Every sale, purchase, and return automatically syncs to your chart of accounts for perfect accuracy.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Complete Accounting</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">No more manual typing. Every sale and purchase automatically saves to your accounts with perfect accuracy.</p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm relative z-10">
                                         <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> Chart of Accounts</li>
                                         <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> In-depth Account Reports</li>
@@ -110,8 +109,8 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-pink-500/10 border border-pink-500/20 rounded-2xl flex items-center justify-center text-pink-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(236,72,153,0.5)] transition-all relative z-10">
                                         ✉️</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Customer CRM & Communications</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Build a loyal customer base with a dedicated CRM module featuring integrated multi-channel communications.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Customer Management</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Keep your customers coming back. Manage their details and send them automatic SMS and email messages easily.</p>
                                     <ul className="grid grid-cols-1 gap-3 text-slate-400 text-sm relative z-10">
                                         <li className="flex items-center gap-2"><span className="text-pink-500">✓</span> Complete Customer Profiles & Ledgers</li>
                                         <li className="flex items-center gap-2"><span className="text-pink-500">✓</span> Automated Email Notifications</li>
@@ -133,8 +132,8 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center text-emerald-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.5)] transition-all relative z-10">
                                         🛡️</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Bank-Grade Security & AI</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Your data is locked down with enterprise security protocols, while the system intelligently alerts you of critical events.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">High Security & AI</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Your business data is 100% safe. The system also sends you smart alerts for important events.</p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm relative z-10">
                                         <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Strict Roles-Based Access Control</li>
                                         <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> High Sales & Login Alerts</li>

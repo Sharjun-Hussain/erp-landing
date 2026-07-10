@@ -7,13 +7,13 @@ export default function PackageIncludes() {
                 {/* Header */}
                 <div className="text-center mb-16 package-header will-change-transform">
                     <span className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-4 block">
-                        Included Value
+                        What You Get
                     </span>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4 flex items-center justify-center gap-3">
                         <span className="text-blue-400 text-2xl md:text-4xl">✦</span> Every Package Includes
                     </h2>
                     <p className="text-slate-400 text-base md:text-lg">
-                        Industry-leading warranty and support included with every purchase
+                        Best warranty and support included for free with every purchase.
                     </p>
                 </div>
 
@@ -29,7 +29,7 @@ export default function PackageIncludes() {
                         </div>
                         <h3 className="text-xl font-bold text-white mb-4">Lifetime Software Warranty</h3>
                         <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-                            Your investment is protected forever. We guarantee lifetime software warranty on all our POS systems with no hidden charges or expiration dates.
+                            Your software is protected forever. We give a lifetime warranty on all our POS systems. No hidden fees.
                         </p>
                     </div>
 
@@ -42,7 +42,7 @@ export default function PackageIncludes() {
                         </div>
                         <h3 className="text-xl font-bold text-white mb-4">Free Lifetime Updates</h3>
                         <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-                            Stay ahead with continuous improvements. Receive all new features, security patches, and enhancements absolutely free for the lifetime of your system.
+                            Get new features and security updates for free, forever.
                         </p>
                     </div>
 
@@ -53,7 +53,7 @@ export default function PackageIncludes() {
                         </div>
                         <h3 className="text-xl font-bold text-white mb-4">Free Service & Support</h3>
                         <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-                            24/7 local support team ready to help. Get free technical assistance, training, and maintenance support whenever you need it at no additional cost.
+                            Our local support team is ready to help 24/7. Get free technical help and training anytime you need it.
                         </p>
                     </div>
 

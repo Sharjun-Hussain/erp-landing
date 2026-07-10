@@ -10,10 +10,10 @@ export default function SetupProcess() {
                         Onboarding Process
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
-                        Seamless Deployment. <br /> <span className="text-slate-500">Zero Friction.</span>
+                        Easy Setup. <br /> <span className="text-slate-500">Fast Results.</span>
                     </h2>
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                        We handle the heavy lifting. From initial requirements to final deployment, our process is designed around your specific operational flow.
+                        We do all the hard work for you. From planning to final setup, our process is built around your specific business needs.
                     </p>
                 </div>
 
@@ -26,9 +26,9 @@ export default function SetupProcess() {
                     {/* Step 1 */}
                     <div className="setup-card relative flex flex-col md:flex-row justify-between items-start md:items-center w-full mb-20 group">
                         <div className="order-2 md:order-1 md:w-5/12 pl-20 md:pl-0 text-left md:text-right pr-0 md:pr-12">
-                            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">1. Discovery & Blueprint</h3>
+                            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">1. Understand Your Needs</h3>
                             <p className="text-slate-400 text-base leading-relaxed">
-                                We jump on a quick call to audit your existing workflows. We document your exact inventory mechanisms, multi-branch logic, and billing requirements to ensure a perfect fit.
+                                We call you to understand your business. We write down exactly how your inventory, branches, and billing should work before we start.
                             </p>
                         </div>
                         
@@ -52,9 +52,9 @@ export default function SetupProcess() {
                         </div>
 
                         <div className="order-3 md:order-3 md:w-5/12 pl-20 md:pl-12 text-left">
-                            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">2. Live Customization</h3>
+                            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">2. Custom Development</h3>
                             <p className="text-slate-400 text-base leading-relaxed">
-                                Meet directly with our core developers. Over the next 72 hours, we rapidly prototype and adjust your UI flow, automation logic, and reporting views until they perfectly align with your vision.
+                                Meet with our developers. In just 3 days, we change the screens, software flow, and features until it matches exactly what you want.
                             </p>
                         </div>
                     </div>
@@ -62,9 +62,9 @@ export default function SetupProcess() {
                     {/* Step 3 */}
                     <div className="setup-card relative flex flex-col md:flex-row justify-between items-start md:items-center w-full group">
                         <div className="order-2 md:order-1 md:w-5/12 pl-20 md:pl-0 text-left md:text-right pr-0 md:pr-12">
-                            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">3. Verify & Launch</h3>
+                            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">3. Test and Pay</h3>
                             <p className="text-slate-400 text-base leading-relaxed">
-                                You test the fully customized system in a staging environment. Once your team gives the green light and verifies every module, you proceed with payment. No risk, pure results.
+                                You test the completed software. When your team is 100% happy and everything works perfectly, then you pay. No risk for you.
                             </p>
                         </div>
                         

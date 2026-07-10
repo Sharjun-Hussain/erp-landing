@@ -6,20 +6,20 @@ export default function FAQSection() {
 
     const faqs = [
         {
-            q: 'Does Inzeedo integrate with our existing Shopify store?',
-            a: 'Yes, Inzeedo features a native, real-time two-way sync with Shopify. When a sale happens in your physical store, your Shopify stock drops instantly. No manual updates required.'
+            q: 'Does Inzeedo connect with our Shopify store?',
+            a: 'Yes, Inzeedo connects directly to Shopify. When you sell something in your shop, your Shopify stock drops instantly. You don\'t have to update it manually.'
         },
         {
             q: 'Can we use our own receipt printers and cash drawers?',
-            a: 'Absolutely. We integrate directly with QZ Tray, allowing seamless communication with USB and network receipt printers, cash drawers, and barcode scanners directly from the browser.'
+            a: 'Yes. You can easily connect your own USB or network receipt printers, cash drawers, and barcode scanners directly to our software.'
         },
         {
-            q: 'Is Inzeedo suitable for manufacturing and recipes?',
-            a: 'Yes. Our production module allows you to build Recipes and Bills of Materials (BOM). When a finished good is produced, the system automatically calculates and deducts the correct amount of raw materials.'
+            q: 'Can we use it for manufacturing and product recipes?',
+            a: 'Yes. You can add your manufacturing recipes. When you make a finished item, the system automatically calculates and deducts the exact amount of raw materials.'
         },
         {
-            q: 'How does the WhatsApp CRM work?',
-            a: 'We leverage the TextLk campaign integration to automatically send digital receipts, shipping updates, and targeted follow-up promotions directly to your customers\' WhatsApp numbers.'
+            q: 'How does the WhatsApp connection work?',
+            a: 'We connect with WhatsApp so you can automatically send digital receipts, delivery updates, and special offers directly to your customers.'
         }
     ];
 
@@ -31,7 +31,7 @@ export default function FAQSection() {
                         Got Questions?
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">Frequently Asked Questions</h2>
-                    <p className="text-slate-400 text-lg">Everything you need to know about migrating your business to the Inzeedo ecosystem.</p>
+                    <p className="text-slate-400 text-lg">Everything you need to know about moving your business to Inzeedo.</p>
                 </div>
                 
                 <div className="space-y-4">

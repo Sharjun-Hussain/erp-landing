@@ -14,11 +14,11 @@ export default function Hero() {
                     </div>
                     <h1
                         className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tighter text-white will-change-transform leading-tight">
-                        Run Your Entire Business <br className="hidden md:block" />
-                        <span className="text-gradient">From One Place.</span>
+                        Software Built Exactly <br className="hidden md:block" />
+                        <span className="text-gradient">For Your Business.</span>
                     </h1>
                     <p className="mt-8 text-slate-400 text-lg md:text-xl max-w-3xl mx-auto will-change-transform" id="hero-sub">
-                        A fully customizable, plug-and-play software tailored for your every need. Combine your Point of Sale, Inventory, CRM, and Accounting into one stress-free platform.
+                        Don't use software that doesn't fit your needs. We build the POS and ERP system to match exactly how you work. You only pay after you test and approve it.
                     </p>
                     <div
                         className="mt-10 flex flex-col sm:flex-row justify-center gap-4 hero-btns will-change-transform w-full sm:w-auto">

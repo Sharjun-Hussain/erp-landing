@@ -94,10 +94,10 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between pb-16 border-b border-slate-200 footer-cta">
                     <div className="mb-8 md:mb-0">
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tighter mb-4">
-                            Ready to unify?
+                            Ready to start?
                         </h2>
                         <p className="text-slate-600 text-lg max-w-md">
-                            Join visionary enterprises running their core operations on the Inzeedo ecosystem.
+                            Join hundreds of businesses running their daily operations on Inzeedo.
                         </p>
                     </div>
                     <a
@@ -107,7 +107,7 @@ export default function Footer() {
                         {/* Spinning border handled by Tailwind */}
                         <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#ffffff_50%,#a855f7_100%)] transition-all" />
                         <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-white px-8 font-bold text-slate-900 backdrop-blur-3xl group-hover:bg-slate-50 transition-colors duration-300">
-                            Deploy Now
+                            Start Now
                         </span>
                     </a>
                 </div>
@@ -122,7 +122,7 @@ export default function Footer() {
                             Inzeedo ERP
                         </a>
                         <p className="text-slate-600 text-sm leading-relaxed mb-8">
-                            The complete point-of-sale and business management software. Built for retail, restaurants, manufacturing, and growing enterprises.
+                            The complete POS and business management software. Built for retail, wholesale, supermarkets, and manufacturing.
                         </p>
                     </div>
 

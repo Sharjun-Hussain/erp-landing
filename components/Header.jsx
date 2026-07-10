@@ -49,7 +49,7 @@ export default function Header() {
                                                 <div className="flex flex-col gap-1">
                                                     <h4
                                                         className="mega-title hidden lg:block text-xs uppercase tracking-widest text-slate-500 mb-2">
-                                                        Core Operations</h4>
+                                                        Main Features</h4>
                                                     <a href="#"
                                                         className="mega-link-card flex items-start gap-4 p-2.5 lg:p-3 lg:-ml-3 rounded-xl hover:bg-white/5 transition-colors">
                                                         <div
@@ -57,7 +57,7 @@ export default function Header() {
                                                             📦</div>
                                                         <div>
                                                             <h5 className="text-white text-[15px] font-medium mb-0.5">Advanced Inventory</h5>
-                                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">GRN & multi-branch transfers.</p>
+                                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Track stock across branches.</p>
                                                         </div>
                                                     </a>
                                                     <a href="#"
@@ -74,7 +74,7 @@ export default function Header() {
                                                 <div className="flex flex-col gap-1">
                                                     <h4
                                                         className="mega-title hidden lg:block text-xs uppercase tracking-widest text-slate-500 mb-2">
-                                                        Growth & Manufacturing</h4>
+                                                        Growth & Production</h4>
                                                     <a href="#"
                                                         className="mega-link-card flex items-start gap-4 p-2.5 lg:p-3 lg:-ml-3 rounded-xl hover:bg-white/5 transition-colors">
                                                         <div
@@ -82,7 +82,7 @@ export default function Header() {
                                                             🤖</div>
                                                         <div>
                                                             <h5 className="text-white text-[15px] font-medium mb-0.5">WhatsApp CRM</h5>
-                                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Automated SMS & Campaigns.</p>
+                                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Send SMS and messages.</p>
                                                         </div>
                                                     </a>
                                                     <a href="#"
@@ -92,7 +92,7 @@ export default function Header() {
                                                             🏭</div>
                                                         <div>
                                                             <h5 className="text-white text-[15px] font-medium mb-0.5">Production BOM</h5>
-                                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Recipes & raw material tracking.</p>
+                                                            <p className="text-slate-400 text-xs leading-relaxed hidden lg:block">Track recipes & materials.</p>
                                                         </div>
                                                     </a>
                                                 </div>

@@ -4,13 +4,13 @@ export default function DeploymentOptions() {
             <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
                 <div className="text-center max-w-3xl mx-auto mb-20 deployment-header will-change-transform">
                     <span className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-4 block">
-                        Limitless Architecture
+                        Works Everywhere
                     </span>
                     <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-tight mb-6">
-                        Fully Hosted. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Stress-Free.</span>
+                        Use It Anywhere. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">No Stress.</span>
                     </h2>
                     <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">
-                        No deployment headaches. Inzeedo is securely hosted in the cloud, giving you instant, stress-free access from any web browser, Android tablet, or Windows terminal.
+                        No setup problems. Our software runs securely in the cloud. You can use it easily from any web browser, Android tablet, or Windows computer.
                     </p>
                 </div>
 
@@ -109,8 +109,8 @@ export default function DeploymentOptions() {
                         </div>
 
                         <div className="relative z-10">
-                            <h3 className="text-2xl font-bold text-white mb-2">Cloud Web App</h3>
-                            <p className="text-slate-400 text-sm">Access your global command center from any browser. Real-time data sync across all branches.</p>
+                            <h3 className="text-2xl font-bold text-white mb-2">Web Browser App</h3>
+                            <p className="text-slate-400 text-sm">Use your POS from any web browser. Data updates instantly across all your shops.</p>
                         </div>
                     </div>
 
@@ -238,9 +238,9 @@ export default function DeploymentOptions() {
 
                         {/* Content */}
                         <div className="text-center mt-auto">
-                            <h3 className="text-xl font-bold text-white mb-2">Native Android App</h3>
+                            <h3 className="text-xl font-bold text-white mb-2">Android Mobile App</h3>
                             <p className="text-sm text-slate-400">
-                                Empower your waiters with our dedicated Android application for lightning-fast tableside ordering.
+                                Give your staff our fast Android app to take orders directly at the table.
                             </p>
                         </div>
                     </div>
@@ -253,11 +253,11 @@ export default function DeploymentOptions() {
                         
                         <div className="flex-1 relative z-10 order-2 md:order-1">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-slate-300 uppercase tracking-widest mb-4">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500"></span> Maximum Reliability
+                                <span className="w-2 h-2 rounded-full bg-emerald-500"></span> Works Offline
                             </div>
-                            <h3 className="text-3xl font-bold text-white mb-4">Windows Native</h3>
+                            <h3 className="text-3xl font-bold text-white mb-4">Windows Computer App</h3>
                             <p className="text-slate-400 text-lg leading-relaxed max-w-md">
-                                Never worry about internet outages again. Run your core operations entirely offline with our lightning-fast native Windows software.
+                                No internet? No problem. Run your business completely offline with our fast Windows software.
                             </p>
                         </div>
 
