@@ -6,11 +6,11 @@ export default function DeploymentOptions() {
                     <span className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-4 block">
                         Limitless Architecture
                     </span>
-                    <h2 className="text-5xl md:text-6xl font-black tracking-tight text-white mb-6">
-                        Deploy Anywhere. Run Anyway.
+                    <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+                        Fully Hosted. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Stress-Free.</span>
                     </h2>
-                    <p className="text-slate-400 text-lg md:text-xl">
-                        A massive, multi-platform ecosystem built to adapt to your specific operational needs. Choose the cloud for agility, or run offline for iron-clad reliability.
+                    <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">
+                        No deployment headaches. Inzeedo is securely hosted in the cloud, giving you instant, stress-free access from any web browser, Android tablet, or Windows terminal.
                     </p>
                 </div>
 
@@ -21,46 +21,55 @@ export default function DeploymentOptions() {
                     <div className="deployment-card lg:col-span-3 lg:row-span-1 relative bg-gradient-to-br from-[#121214] to-black border border-white/5 rounded-[2rem] p-8 hover:border-blue-500/30 transition-colors duration-500 group overflow-hidden will-change-transform flex flex-col justify-between">
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.15),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         
-                        {/* CSS Art: Safari Browser */}
-                        <div className="relative h-36 w-[80%] max-w-[400px] ml-auto bg-[#09090b]/80 backdrop-blur-md rounded-t-xl border border-white/10 overflow-hidden mb-6 flex flex-col group-hover:-translate-y-2 transition-transform duration-500 shadow-2xl">
-                            <div className="h-8 bg-[#1a1a1c] border-b border-white/10 flex items-center px-4 gap-2">
-                                <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
-                                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
-                                <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
-                                <div className="ml-4 h-4 w-32 bg-white/5 rounded-md"></div>
+                        {/* CSS Art: GSAP Animated Safari Browser */}
+                        <div className="web-anim-container relative h-72 w-full bg-[#050505] rounded-xl border border-white/10 overflow-hidden mt-6 flex flex-col shadow-2xl">
+                            
+                            {/* Fake Mouse Cursor */}
+                            <svg className="web-fake-mouse absolute z-[60] w-5 h-5 drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)] text-white opacity-0" style={{ left: '50%', top: '50%' }} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86c.15-.15.35-.23.56-.23h6.46c.45 0 .67-.54.35-.85L6.35 2.86c-.31-.31-.85-.09-.85.35z" fill="currentColor" stroke="black" strokeWidth="1"/>
+                            </svg>
+
+                            <div className="h-6 bg-[#1a1a1c] border-b border-white/5 flex items-center px-3 gap-2 shrink-0">
+                                <div className="flex gap-1.5">
+                                    <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                                    <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+                                </div>
+                                <div className="ml-4 h-3 w-32 bg-white/5 rounded-md"></div>
                             </div>
-                            <div className="flex-1 p-2 flex gap-2 overflow-hidden">
+                            <div className="flex-1 p-2 flex gap-2 overflow-hidden relative">
+                                
                                 {/* POS Sidebar */}
                                 <div className="w-10 bg-white/5 rounded-lg border border-white/5 flex flex-col items-center py-2 gap-2 shrink-0">
-                                    <div className="w-5 h-5 rounded bg-blue-500/30 border border-blue-500/20 group-hover:bg-blue-500/60 transition-colors duration-500"></div>
-                                    <div className="w-5 h-5 rounded bg-white/5 group-hover:bg-white/20 transition-colors duration-500 delay-100"></div>
-                                    <div className="w-5 h-5 rounded bg-white/5 group-hover:bg-white/20 transition-colors duration-500 delay-200"></div>
-                                    <div className="w-5 h-5 rounded bg-white/5 group-hover:bg-white/20 transition-colors duration-500 delay-300"></div>
+                                    <div className="w-5 h-5 rounded bg-blue-500/30 border border-blue-500/20"></div>
+                                    <div className="w-5 h-5 rounded bg-white/5"></div>
+                                    <div className="w-5 h-5 rounded bg-white/5"></div>
+                                    <div className="w-5 h-5 rounded bg-white/5"></div>
                                 </div>
                                 
                                 {/* POS Product Grid */}
                                 <div className="flex-1 grid grid-cols-3 gap-2">
-                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5 group-hover:scale-[1.05] group-hover:bg-white/10 transition-all duration-300">
-                                        <div className="flex-1 bg-white/10 rounded-md group-hover:bg-blue-500/30 transition-colors duration-300"></div>
+                                    <div className="web-product-1 bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5">
+                                        <div className="flex-1 bg-white/10 rounded-md"></div>
                                         <div className="h-1 w-3/4 bg-white/20 rounded-full"></div>
                                     </div>
-                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5 group-hover:scale-[1.05] group-hover:bg-white/10 transition-all duration-300 delay-75">
+                                    <div className="web-product-2 bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5">
                                         <div className="flex-1 bg-white/10 rounded-md"></div>
                                         <div className="h-1 w-1/2 bg-white/20 rounded-full"></div>
                                     </div>
-                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5 group-hover:scale-[1.05] group-hover:bg-white/10 transition-all duration-300 delay-150">
+                                    <div className="web-product-3 bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5">
                                         <div className="flex-1 bg-white/10 rounded-md"></div>
                                         <div className="h-1 w-2/3 bg-white/20 rounded-full"></div>
                                     </div>
-                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5 group-hover:scale-[1.05] group-hover:bg-white/10 transition-all duration-300 delay-[225ms]">
+                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5">
                                         <div className="flex-1 bg-white/10 rounded-md"></div>
                                         <div className="h-1 w-3/4 bg-white/20 rounded-full"></div>
                                     </div>
-                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5 group-hover:scale-[1.05] group-hover:bg-white/10 transition-all duration-300 delay-300">
+                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5">
                                         <div className="flex-1 bg-white/10 rounded-md"></div>
                                         <div className="h-1 w-full bg-white/20 rounded-full"></div>
                                     </div>
-                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5 group-hover:scale-[1.05] group-hover:bg-white/10 transition-all duration-300 delay-[375ms]">
+                                    <div className="bg-white/5 rounded-lg border border-white/5 flex flex-col p-1.5 gap-1.5">
                                         <div className="flex-1 bg-white/10 rounded-md"></div>
                                         <div className="h-1 w-1/2 bg-white/20 rounded-full"></div>
                                     </div>
@@ -70,25 +79,30 @@ export default function DeploymentOptions() {
                                 <div className="w-24 bg-[#121214] rounded-lg border border-white/10 p-2 flex flex-col shadow-inner relative overflow-hidden shrink-0">
                                     <div className="h-1.5 w-1/2 bg-white/30 rounded-full mb-2"></div>
                                     <div className="flex-1 flex flex-col gap-1.5 border-b border-white/5 mb-1.5 pb-1.5">
-                                        <div className="flex justify-between items-center transform group-hover:translate-x-0 -translate-x-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                                        <div className="web-cart-item-1 flex justify-between items-center -translate-x-full opacity-0">
                                             <div className="h-1 w-2/3 bg-blue-400/50 rounded-full"></div>
                                             <div className="h-1 w-3 bg-white/20 rounded-full"></div>
                                         </div>
-                                        <div className="flex justify-between items-center transform group-hover:translate-x-0 -translate-x-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                                        <div className="web-cart-item-2 flex justify-between items-center -translate-x-full opacity-0">
                                             <div className="h-1 w-1/2 bg-white/10 rounded-full"></div>
                                             <div className="h-1 w-3 bg-white/20 rounded-full"></div>
                                         </div>
-                                        <div className="flex justify-between items-center transform group-hover:translate-x-0 -translate-x-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300">
+                                        <div className="web-cart-item-3 flex justify-between items-center -translate-x-full opacity-0">
                                             <div className="h-1 w-3/4 bg-white/10 rounded-full"></div>
                                             <div className="h-1 w-3 bg-white/20 rounded-full"></div>
                                         </div>
                                     </div>
                                     <div className="flex justify-between items-center mb-2">
                                         <div className="h-1.5 w-6 bg-white/40 rounded-full"></div>
-                                        <div className="h-1.5 w-5 bg-emerald-400 rounded-full group-hover:scale-110 transition-transform duration-500 delay-500"></div>
+                                        <div className="h-1.5 w-5 bg-emerald-400 rounded-full"></div>
                                     </div>
-                                    <div className="h-5 w-full bg-emerald-500/20 border border-emerald-500/30 rounded flex items-center justify-center shadow-[0_0_5px_rgba(16,185,129,0.3)] group-hover:bg-emerald-500/40 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.5)] transition-all duration-500 delay-500">
+                                    <div className="web-checkout-btn h-5 w-full bg-emerald-500/20 border border-emerald-500/30 rounded flex items-center justify-center shadow-[0_0_5px_rgba(16,185,129,0.3)]">
                                         <div className="h-1 w-1/2 bg-emerald-400 rounded-full"></div>
+                                    </div>
+                                    
+                                    {/* Web Success Overlay */}
+                                    <div className="web-success-overlay absolute inset-0 bg-emerald-500/90 backdrop-blur-sm z-20 flex flex-col items-center justify-center translate-y-full opacity-0">
+                                        <div className="text-white font-black text-[10px] uppercase tracking-widest">Paid</div>
                                     </div>
                                 </div>
                             </div>
@@ -106,8 +120,8 @@ export default function DeploymentOptions() {
                         
                         {/* CSS Art: GSAP Animated Mobile POS */}
                         <div className="mobile-anim-container relative h-[460px] w-[245px] mx-auto bg-[#000000] rounded-[2.5rem] border-[5px] border-[#27272a] overflow-hidden mb-6 flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                            {/* Notch */}
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 bg-[#27272a] rounded-b-2xl z-40"></div>
+                            {/* Android Hole Punch Camera */}
+                            <div className="absolute top-5 right-10 w-3 h-3 bg-[#18181b] rounded-full z-40 border border-[#050505]"></div>
                             
                             {/* Status Bar */}
                             <div className="flex justify-between items-center px-5 pt-2 pb-1 w-full absolute top-0 z-20 bg-gradient-to-b from-black/90 to-transparent">
@@ -222,9 +236,12 @@ export default function DeploymentOptions() {
                             </div>
                         </div>
 
-                        <div className="relative z-10 text-center">
-                            <h3 className="text-2xl font-bold text-white mb-2">Native Mobile</h3>
-                            <p className="text-slate-400 text-sm">iOS and Android apps for waiters, managers, and warehouse staff on the go.</p>
+                        {/* Content */}
+                        <div className="text-center mt-auto">
+                            <h3 className="text-xl font-bold text-white mb-2">Native Android App</h3>
+                            <p className="text-sm text-slate-400">
+                                Empower your waiters with our dedicated Android application for lightning-fast tableside ordering.
+                            </p>
                         </div>
                     </div>
 

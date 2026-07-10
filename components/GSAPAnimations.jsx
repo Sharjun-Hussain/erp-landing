@@ -351,6 +351,57 @@ export default function GSAPAnimations() {
                  .to({}, { duration: 3 });
         }
 
+        // Web POS Looping Animation
+        const webContainer = document.querySelector('.web-anim-container');
+        if (webContainer) {
+            const webTl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+            
+            webTl.set('.web-fake-mouse', { x: 200, y: 250, opacity: 0 })
+                 .set('.web-cart-item-1', { x: '-100%', opacity: 0 })
+                 .set('.web-cart-item-2', { x: '-100%', opacity: 0 })
+                 .set('.web-cart-item-3', { x: '-100%', opacity: 0 })
+                 .set('.web-checkout-btn', { scale: 1, backgroundColor: 'rgba(16, 185, 129, 0.2)' })
+                 .set('.web-success-overlay', { y: '100%', opacity: 0 });
+
+            // 1. Move to Product 1
+            webTl.to('.web-fake-mouse', { opacity: 1, duration: 0.3 })
+                 .to('.web-fake-mouse', { x: 100, y: 80, duration: 0.8, ease: 'power2.inOut' })
+                 // Click Product 1
+                 .to('.web-product-1', { scale: 0.9, backgroundColor: 'rgba(255,255,255,0.2)', duration: 0.1 })
+                 .to('.web-product-1', { scale: 1, backgroundColor: 'rgba(255,255,255,0.05)', duration: 0.1 })
+                 // Add Cart 1
+                 .to('.web-cart-item-1', { x: '0%', opacity: 1, duration: 0.4, ease: 'back.out(1.5)' }, '+=0.1')
+                 
+            // 2. Move to Product 2
+                 .to('.web-fake-mouse', { x: 200, y: 80, duration: 0.6, ease: 'power2.inOut' })
+                 // Click Product 2
+                 .to('.web-product-2', { scale: 0.9, backgroundColor: 'rgba(255,255,255,0.2)', duration: 0.1 })
+                 .to('.web-product-2', { scale: 1, backgroundColor: 'rgba(255,255,255,0.05)', duration: 0.1 })
+                 // Add Cart 2
+                 .to('.web-cart-item-2', { x: '0%', opacity: 1, duration: 0.4, ease: 'back.out(1.5)' }, '+=0.1')
+                 
+            // 3. Move to Product 3
+                 .to('.web-fake-mouse', { x: 300, y: 80, duration: 0.6, ease: 'power2.inOut' })
+                 // Click Product 3
+                 .to('.web-product-3', { scale: 0.9, backgroundColor: 'rgba(255,255,255,0.2)', duration: 0.1 })
+                 .to('.web-product-3', { scale: 1, backgroundColor: 'rgba(255,255,255,0.05)', duration: 0.1 })
+                 // Add Cart 3
+                 .to('.web-cart-item-3', { x: '0%', opacity: 1, duration: 0.4, ease: 'back.out(1.5)' }, '+=0.1')
+                 
+            // 4. Move to Checkout Button
+                 .to('.web-fake-mouse', { x: 390, y: 200, duration: 0.8, ease: 'power2.inOut' })
+                 // Click Checkout
+                 .to('.web-checkout-btn', { scale: 0.9, backgroundColor: 'rgba(16, 185, 129, 0.6)', duration: 0.1 })
+                 .to('.web-checkout-btn', { scale: 1, duration: 0.1 })
+                 
+            // 5. Success Overlay
+                 .to({}, { duration: 0.3 })
+                 .to('.web-fake-mouse', { opacity: 0, duration: 0.2 })
+                 .to('.web-success-overlay', { y: '0%', opacity: 1, duration: 0.5, ease: 'power3.out' })
+                 
+            // Hold on screen
+                 .to({}, { duration: 3 });
+        }
 
 
         return () => {

@@ -8,9 +8,9 @@ export default function Hero() {
                         className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.15),transparent_70%)] -z-10 pointer-events-none">
                     </div>
                     <div
-                        className="border border-white/10 rounded-full px-4 py-1.5 mb-8 bg-white/5 backdrop-blur-sm text-sm font-medium text-slate-300 will-change-transform hero-badge">
-                        <span className="w-2 h-2 rounded-full bg-blue-500 inline-block mr-2 animate-pulse"></span> Inzeedo ERP v2.0 is
-                        now live
+                        className="border border-emerald-500/20 rounded-full px-4 py-1.5 mb-8 bg-emerald-500/10 backdrop-blur-sm text-sm font-medium text-emerald-300 will-change-transform hero-badge shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-2 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span> 
+                        Now scaling with new Enterprise Features
                     </div>
                     <h1
                         className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tighter text-white will-change-transform leading-tight">
@@ -18,7 +18,7 @@ export default function Hero() {
                         <span className="text-gradient">From One Place.</span>
                     </h1>
                     <p className="mt-8 text-slate-400 text-lg md:text-xl max-w-3xl mx-auto will-change-transform" id="hero-sub">
-                        A complete, easy-to-use software that combines your Point of Sale, Inventory, Customer Relationships, and Accounting. Stop juggling multiple apps and start scaling.
+                        A fully customizable, plug-and-play software tailored for your every need. Combine your Point of Sale, Inventory, CRM, and Accounting into one stress-free platform.
                     </p>
                     <div
                         className="mt-10 flex flex-col sm:flex-row justify-center gap-4 hero-btns will-change-transform w-full sm:w-auto">
