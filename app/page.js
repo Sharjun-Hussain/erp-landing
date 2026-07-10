@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Modules from "@/components/Modules";
+import AllFeatures from "@/components/AllFeatures";
 import Architecture from "@/components/Architecture";
 import Clients from "@/components/Clients";
 import BusinessTypes from "@/components/BusinessTypes";
@@ -20,6 +21,7 @@ export default function Home() {
             <Hero />
             <Marquee />
             <Modules />
+            <AllFeatures />
             {/* <Architecture /> */}
             <Clients />
             <BusinessTypes />

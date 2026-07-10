@@ -131,6 +131,16 @@ export default function GSAPAnimations() {
             });
         }
 
+        gsap.from('.all-features-header', {
+            scrollTrigger: { trigger: '#all-features', start: 'top 80%' },
+            y: 30, opacity: 0, duration: 1, ease: 'power3.out'
+        });
+
+        gsap.from('.feature-pill', {
+            scrollTrigger: { trigger: '.all-features-grid', start: 'top 80%' },
+            y: 30, opacity: 0, stagger: 0.05, duration: 0.8, ease: 'power3.out'
+        });
+
         const stackLayers = document.querySelectorAll('.stack-layer');
         if (stackLayers.length > 0) {
             gsap.from(stackLayers, {
