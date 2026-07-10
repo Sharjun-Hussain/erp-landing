@@ -141,15 +141,21 @@ export default function GSAPAnimations() {
             });
         }
 
-        gsap.from('.all-features-header', {
-            scrollTrigger: { trigger: '#all-features', start: 'top 80%' },
-            y: 30, opacity: 0, duration: 1, ease: 'power3.out'
-        });
+        gsap.fromTo('.all-features-header', 
+            { y: 30, opacity: 0 },
+            {
+                scrollTrigger: { trigger: '#all-features', start: 'top 80%' },
+                y: 0, opacity: 1, duration: 1, ease: 'power3.out'
+            }
+        );
 
-        gsap.from('.feature-pill', {
-            scrollTrigger: { trigger: '.all-features-grid', start: 'top 80%' },
-            y: 30, opacity: 0, stagger: 0.05, duration: 0.8, ease: 'power3.out'
-        });
+        gsap.fromTo('.feature-pill', 
+            { y: 30, opacity: 0 },
+            {
+                scrollTrigger: { trigger: '.all-features-grid', start: 'top 80%' },
+                y: 0, opacity: 1, stagger: 0.05, duration: 0.8, ease: 'power3.out'
+            }
+        );
 
         const stackLayers = document.querySelectorAll('.stack-layer');
         if (stackLayers.length > 0) {
@@ -257,6 +263,56 @@ export default function GSAPAnimations() {
             gsap.from(mobileCards, {
                 scrollTrigger: { trigger: mobileCards[0], start: 'top 80%' },
                 x: -50, opacity: 0, stagger: 0.2, duration: 1, ease: 'power3.out'
+            });
+        }
+
+        gsap.fromTo('.setup-header', 
+            { y: 40, opacity: 0 },
+            {
+                scrollTrigger: { trigger: '#setup-process', start: 'top 80%' },
+                y: 0, opacity: 1, duration: 1, ease: 'power3.out'
+            }
+        );
+
+        gsap.fromTo('.package-header', 
+            { y: 40, opacity: 0 },
+            {
+                scrollTrigger: { trigger: '#package-includes', start: 'top 80%' },
+                y: 0, opacity: 1, duration: 1, ease: 'power3.out'
+            }
+        );
+
+        gsap.fromTo('.package-card', 
+            { y: 50, opacity: 0 },
+            {
+                scrollTrigger: { trigger: '#package-includes', start: 'top 70%' },
+                y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'power3.out'
+            }
+        );
+
+        const setupCards = document.querySelectorAll('.setup-card');
+        if (setupCards.length > 0) {
+            gsap.fromTo('.scroll-progress-line', 
+                { scaleY: 0 },
+                {
+                    scaleY: 1,
+                    scrollTrigger: {
+                        trigger: '#setup-process',
+                        start: 'top center',
+                        end: 'bottom center',
+                        scrub: 1
+                    }
+                }
+            );
+
+            setupCards.forEach((card, i) => {
+                gsap.fromTo(card, 
+                    { y: 50, opacity: 0 },
+                    {
+                        scrollTrigger: { trigger: card, start: 'top 85%' },
+                        y: 0, opacity: 1, duration: 1, ease: 'power3.out'
+                    }
+                );
             });
         }
 
