@@ -487,6 +487,6 @@ export default function GSAPAnimations() {
             gsap.ticker.remove(updateLenis);
             lenis.destroy();
         }
-    });
+    }, []);
     return <CustomCursor />;
 }
