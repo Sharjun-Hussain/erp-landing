@@ -3,7 +3,7 @@ export default function RobustTrack() {
     return (
         <>
             <section id="robust-horizontal"
-                    className="relative h-screen bg-transparent overflow-hidden hidden md:block border-t border-white/5">
+                    className="relative h-screen overflow-hidden hidden md:block bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.08),transparent_60%)]">
             
                     <div id="robust-track" className="flex items-center h-full w-fit px-[10vw] will-change-transform">
             
