@@ -1,5 +1,9 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 
 export default function SyncAddons() {
+    const t = useTranslations('SyncAddons');
     return (
         <>
             <section id="sync-addons"
@@ -9,29 +13,29 @@ export default function SyncAddons() {
                         <div className="lg:w-1/2 sync-text will-change-transform">
                             <div
                                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
-                                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> Extra Features
+                                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> {t('extraFeatures')} 
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">Live Stock Updates.</h2>
-                            <p className="text-slate-400 text-lg mb-6">Never sell an item you don't have. When you sell something in your shop, your website stock updates instantly. When someone buys online, your POS records it and updates your accounts.</p>
+                            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">{t('liveStock')}</h2>
+                            <p className="text-slate-400 text-lg mb-6">{t('neverSell')}</p>
             
                             <ul className="space-y-4 mb-8">
                                 <li className="flex items-center gap-3 text-slate-300 font-medium">
                                     <div
                                         className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-white text-xs border border-white/10">
                                         1</div>
-                                    Connect with Shopify
+                                    {t('connectShopify')} 
                                 </li>
                                 <li className="flex items-center gap-3 text-slate-300 font-medium">
                                     <div
                                         className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-white text-xs border border-white/10">
                                         2</div>
-                                    Connect with Custom Websites
+                                    {t('connectWebsites')} 
                                 </li>
                                 <li className="flex items-center gap-3 text-slate-300 font-medium">
                                     <div
                                         className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-white text-xs border border-white/10">
                                         3</div>
-                                    Connect with WooCommerce & APIs
+                                    {t('connectWoo')} 
                                 </li>
                             </ul>
                         </div>

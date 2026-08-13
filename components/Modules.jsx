@@ -1,5 +1,9 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 
 export default function Modules() {
+    const t = useTranslations('Modules');
     return (
         <>
             <section id="modules" className="py-24 relative z-20 bg-[#09090b]">
@@ -8,9 +12,9 @@ export default function Modules() {
             
                             {/**/}
                             <div className="lg:w-1/3 lg:sticky top-32 z-10 module-text-container">
-                                <span className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-4 block">All In One</span>
-                                <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">Everything you need to run your business.</h2>
-                                <p className="text-slate-400 text-lg mb-8">Stop using many different apps. Our software connects your store, online shop, and back office automatically.</p>
+                                <span className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-4 block">{t('allInOne')}</span>
+                                <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">{t('everything')}</h2>
+                                <p className="text-slate-400 text-lg mb-8">{t('stopUsing')}</p>
             
                                 <div className="hidden lg:flex flex-col gap-4">
                                     <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
@@ -39,11 +43,11 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all relative z-10">
                                         🏪</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Sales & POS System</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">A beautiful, easy-to-use touch screen POS. Choose from two different sales screens that fit your working style.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">{t('salesPos')}</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">{t('beautifulPos')}</p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm relative z-10">
-                                        <li className="flex items-center gap-2"><span className="text-blue-500">✓</span> Credit Sales & Returns</li>
-                                        <li className="flex items-center gap-2"><span className="text-blue-500">✓</span> Custom Barcode & Receipts</li>
+                                        <li className="flex items-center gap-2"><span className="text-blue-500">✓</span> {t('creditSales')}</li>
+                                        <li className="flex items-center gap-2"><span className="text-blue-500">✓</span> {t('customBarcode')}</li>
                                         <li className="flex items-center gap-2"><span className="text-blue-500">✓</span> Unlimited Products</li>
                                         <li className="flex items-center gap-2"><span className="text-blue-500">✓</span> Lifetime Access (No Expiry)</li>
                                     </ul>
@@ -63,11 +67,11 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-amber-500/10 border border-amber-500/20 rounded-2xl flex items-center justify-center text-amber-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all relative z-10">
                                         📦</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Supplier & Inventory Control</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Manage all your suppliers and track your stock perfectly, across as many branches as you need.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">{t('supplierControl')}</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">{t('manageSuppliers')}</p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm relative z-10">
-                                        <li className="flex items-center gap-2"><span className="text-amber-500">✓</span> Supplier Directory</li>
-                                        <li className="flex items-center gap-2"><span className="text-amber-500">✓</span> Supplier Ledgers</li>
+                                        <li className="flex items-center gap-2"><span className="text-amber-500">✓</span> {t('supplierDir')}</li>
+                                        <li className="flex items-center gap-2"><span className="text-amber-500">✓</span> {t('supplierLedgers')}</li>
                                         <li className="flex items-center gap-2"><span className="text-amber-500">✓</span> Automated Purchase Orders</li>
                                         <li className="flex items-center gap-2"><span className="text-amber-500">✓</span> Detailed Supplier Reports</li>
                                     </ul>
@@ -80,19 +84,19 @@ export default function Modules() {
                                         className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,83,186,0.2),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                                     </div>
                                     <div className="flex flex-wrap gap-2 mb-6 relative z-10">
-                                        <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-white group-hover:border-purple-500/30 transition-colors">Chart of Accounts</span>
-                                        <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-semibold">General Ledger</span>
+                                        <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-white group-hover:border-purple-500/30 transition-colors">{t('chartAcc')}</span>
+                                        <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-semibold">{t('generalLedger')}</span>
                                     </div>
                                     <div
                                         className="w-14 h-14 bg-purple-500/10 border border-purple-500/20 rounded-2xl flex items-center justify-center text-purple-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,83,186,0.5)] transition-all relative z-10">
                                         📈</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Complete Accounting</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">No more manual typing. Every sale and purchase automatically saves to your accounts with perfect accuracy.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">{t('completeAcc')}</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">{t('noManual')}</p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm relative z-10">
-                                        <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> Chart of Accounts</li>
-                                        <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> In-depth Account Reports</li>
+                                        <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> {t('chartAcc')}</li>
+                                        <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> {t('accReports')}</li>
                                         <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> Income & Expense Tracking</li>
-                                        <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> Balance Sheets</li>
+                                        <li className="flex items-center gap-2"><span className="text-purple-500">✓</span> {t('balanceSheet')}s</li>
                                     </ul>
                                 </div>
 
@@ -109,11 +113,11 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-pink-500/10 border border-pink-500/20 rounded-2xl flex items-center justify-center text-pink-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(236,72,153,0.5)] transition-all relative z-10">
                                         ✉️</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Customer Management</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Keep your customers coming back. Manage their details and send them automatic SMS and email messages easily.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">{t('customerMgmt')}</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">{t('keepCustomers')}</p>
                                     <ul className="grid grid-cols-1 gap-3 text-slate-400 text-sm relative z-10">
-                                        <li className="flex items-center gap-2"><span className="text-pink-500">✓</span> Complete Customer Profiles & Ledgers</li>
-                                        <li className="flex items-center gap-2"><span className="text-pink-500">✓</span> Automated Email Notifications</li>
+                                        <li className="flex items-center gap-2"><span className="text-pink-500">✓</span> {t('customerProfiles')}</li>
+                                        <li className="flex items-center gap-2"><span className="text-pink-500">✓</span> {t('emailNotifs')}</li>
                                         <li className="flex items-center gap-2"><span className="text-pink-500">✓</span> Integrated SMS Alerts</li>
                                     </ul>
                                 </div>
@@ -132,11 +136,11 @@ export default function Modules() {
                                     <div
                                         className="w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center text-emerald-400 text-3xl mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.5)] transition-all relative z-10">
                                         🛡️</div>
-                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">High Security & AI</h3>
-                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">Your business data is 100% safe. The system also sends you smart alerts for important events.</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 relative z-10">{t('highSec')}</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed group-hover:text-slate-300 transition-colors relative z-10 mb-6">{t('dataSafe')}</p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm relative z-10">
-                                        <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Strict Roles-Based Access Control</li>
-                                        <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> High Sales & Login Alerts</li>
+                                        <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> {t('rbac')}</li>
+                                        <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> {t('salesAlerts')}</li>
                                         <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 256-Bit Secure Algorithm</li>
                                         <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Future AI Capabilities Integrated</li>
                                     </ul>

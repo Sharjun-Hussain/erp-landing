@@ -1,5 +1,9 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 
 export default function RobustTrack() {
+    const t = useTranslations('RobustTrack');
     return (
         <>
             <section id="robust-horizontal"

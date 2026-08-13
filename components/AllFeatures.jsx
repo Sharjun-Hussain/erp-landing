@@ -1,4 +1,8 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 export default function AllFeatures() {
+    const t = useTranslations('AllFeatures');
     const features = [
         { name: "Point of Sale", icon: "🛒", color: "from-blue-500/20 to-transparent", border: "group-hover:border-blue-500/50" },
         { name: "Inventory Management", icon: "📦", color: "from-amber-500/20 to-transparent", border: "group-hover:border-amber-500/50" },

@@ -1,5 +1,9 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 
 export default function MobileCards() {
+    const t = useTranslations('MobileCards');
     return (
         <>
             <section className="py-24 bg-transparent md:hidden relative z-20 border-t border-white/5">

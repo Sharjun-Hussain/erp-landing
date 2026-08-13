@@ -1,4 +1,8 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 export default function PackageIncludes() {
+    const t = useTranslations('PackageIncludes');
     return (
         <section id="package-includes" className="py-24 relative z-20 bg-[#09090b] border-t border-white/5">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.05),transparent_70%)] pointer-events-none"></div>

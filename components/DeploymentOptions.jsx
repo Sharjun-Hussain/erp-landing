@@ -1,4 +1,8 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 export default function DeploymentOptions() {
+    const t = useTranslations('DeploymentOptions');
     return (
         <section id="deployment-options" className="py-24 relative z-20 bg-[#09090b] border-t border-white/5">
             <div className="max-w-[1400px] mx-auto px-6 lg:px-10">

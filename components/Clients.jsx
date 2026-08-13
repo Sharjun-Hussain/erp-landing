@@ -1,5 +1,9 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 
 export default function Clients() {
+    const t = useTranslations('Clients');
     return (
         <>
             <section id="clients" className="py-12 border-t border-white/5 bg-[#0a0a0c] overflow-hidden relative z-20">

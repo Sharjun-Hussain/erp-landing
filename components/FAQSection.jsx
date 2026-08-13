@@ -1,7 +1,11 @@
 'use client';
+import { useTranslations } from 'next-intl';
+
+'use client';
 import { useState } from 'react';
 
 export default function FAQSection() {
+    const t = useTranslations('FAQSection');
     const [openIndex, setOpenIndex] = useState(null);
 
     const faqs = [

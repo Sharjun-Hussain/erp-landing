@@ -1,4 +1,8 @@
+'use client';
+import { useTranslations } from 'next-intl';
+
 export default function SetupProcess() {
+    const t = useTranslations('SetupProcess');
     return (
         <section id="setup-process" className="py-24 relative z-20 bg-[#09090b] border-t border-white/5 overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,rgba(251,191,36,0.08),transparent_50%)] pointer-events-none"></div>
