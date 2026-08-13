@@ -1,7 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 
-"use client";
+
 
 import { useRef } from "react";
 import gsap from "gsap";
@@ -134,7 +134,7 @@ export default function Footer() {
                     <div className="footer-grid-item">
                         <h4 className="text-slate-900 font-bold mb-6 tracking-widest uppercase text-xs">Modules</h4>
                         <ul className="space-y-4 text-sm text-slate-600">
-                            {['Omnichannel POS', 'Advanced {t('inventory')} & GRN', '{t('manufacturing')} & Recipes', 'WhatsApp CRM'].map((item) => (
+                            {['Omnichannel POS', `Advanced ${t('inventory')} & GRN`, `${t('manufacturing')} & Recipes`, 'WhatsApp CRM'].map((item) => (
                                 <li key={item}>
                                     <a href="#" className="group flex items-center hover:text-blue-600 transition-colors duration-300">
                                         <span className="transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 mr-2 text-blue-600">

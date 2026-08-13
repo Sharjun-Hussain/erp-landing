@@ -1,7 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 
-'use client';
+
 import { useState } from 'react';
 
 export default function FAQSection() {
