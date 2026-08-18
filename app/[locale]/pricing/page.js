@@ -2,6 +2,7 @@ import FAQSection from "@/components/FAQSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PricingCards from "@/components/PricingCards";
+import GSAPAnimations from "@/components/GSAPAnimations";
 
 export const metadata = {
     title: "Pricing | Inzeedo ERP",
@@ -15,6 +16,7 @@ export default function PricingPage() {
             <PricingCards />
             <FAQSection />
             <Footer />
+            <GSAPAnimations />
         </main>
     );
 }
